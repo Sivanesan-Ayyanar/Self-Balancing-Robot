@@ -1,0 +1,272 @@
+#VRML V2.0 utf8
+
+PROTO Header_Info [
+field SFString vendor "Parametric Technology Corporation"
+field SFString product "Pro/ENGINEER"
+field SFString version ""
+field SFString sceneFile ""]
+{WorldInfo {}}
+
+PROTO Node_Info [
+field SFString node_type ""
+field SFString node_name ""]
+{WorldInfo {}}
+
+PROTO Geom_Type [
+field SFString geom_type_s "T_Empty"
+field SFInt32 trg_qual 1]
+{WorldInfo {}}
+
+PROTO Member_Info [
+field SFString member_name ""
+field SFInt32 member_id 0
+field SFString proe_name ""
+field SFString proe_type_s  ""
+field SFString expl_status_s "Vrml_Exp_Unknown"
+field MFFloat drag_trf [] ]
+{WorldInfo {}}
+
+PROTO Model_Info [
+field SFInt32 proe_id 1
+field SFString proe_type_s "Proe_Assembly"
+field SFString proe_name "BALANCINGBOT_V2"
+field SFInt32 maj_rev -5
+field SFInt32 min_rev  -5
+field SFInt32 rev_num 116
+field SFInt32 rev_num_cosm 73
+field SFString inst_type_s "Inst_Type_Main"
+field SFString generic_name "generic_name"
+field SFFloat s_factor 39.3701
+field MFString parameter_names []
+field MFString parameter_types []
+field MFString parameter_values []
+]
+{WorldInfo {}}
+
+Header_Info{
+vendor "Parametric Technology Corporation"
+product "Creo Parametric"
+version "2"
+}
+
+DEF V_Model Anchor {
+  url ""
+  description "balancingbot_v2.asm"
+children [
+Node_Info {
+node_type "V_Model"
+node_name "balancingbot_v2.asm"
+}
+DEF Default Viewpoint {
+description "Default"
+position -7.94638 3.24562 3.28155
+orientation -0.183856 -0.975748 -0.118798 1.20146
+fieldOfView 1.54015
+}
+
+DEF FRONT Viewpoint {
+description "FRONT"
+position 0 1.06807 7.569
+orientation 0 0 1 0
+fieldOfView 1.54015
+}
+
+DEF RIGHT Viewpoint {
+description "RIGHT"
+position 7.569 1.06807 0
+orientation 0 1 0 1.5708
+fieldOfView 1.54015
+}
+
+DEF TOP Viewpoint {
+description "TOP"
+position 0 8.63707 0
+orientation -1 0 0 1.5708
+fieldOfView 1.54015
+}
+
+DEF BOTTOM Viewpoint {
+description "BOTTOM"
+position 0 -6.50093 0
+orientation 0 -0.707107 0.707107 3.14159
+fieldOfView 1.54015
+}
+
+DEF LEFT Viewpoint {
+description "LEFT"
+position -7.569 1.06807 0
+orientation 0 -1 0 1.5708
+fieldOfView 1.54015
+}
+
+DEF BACK Viewpoint {
+description "BACK"
+position 0 1.06807 -7.569
+orientation 0 1 0 3.14159
+fieldOfView 1.54015
+}
+
+Model_Info {
+proe_id 1
+proe_type_s "Proe_Assembly"
+proe_name "BALANCINGBOT_V2"
+maj_rev -5
+min_rev  -5
+rev_num 116
+rev_num_cosm 73
+inst_type_s "Inst_Type_Main"
+generic_name ""
+s_factor 39.3701
+parameter_names ["MODELED_BY","DESCRIPTION"]
+parameter_types ["STRING","STRING"]
+parameter_values ["",""]
+}
+
+DEF Rep_0 Group {
+ children [
+Node_Info {
+node_type "Rep"
+node_name "Rep_0"
+}
+DEF motormount Group {
+children [
+Node_Info {
+node_type "Member"
+node_name "motormount"
+}
+Member_Info {
+member_name "motormount"
+member_id 40
+}
+
+Inline {
+url "doublemotormount_prt.wrl"}
+
+]
+}
+
+DEF motor1 Group {
+children [
+Node_Info {
+node_type "Member"
+node_name "motor1"
+}
+Member_Info {
+member_name "motor1"
+member_id 42
+}
+
+Transform {
+rotation -0.57735 -0.57735 -0.57735 -2.0944
+translation 1.67932 -0.508 0
+children [
+Inline {
+url "motor_prt.wrl"}
+
+]
+}
+
+]
+}
+
+DEF motor2 Group {
+children [
+Node_Info {
+node_type "Member"
+node_name "motor2"
+}
+Member_Info {
+member_name "motor2"
+member_id 48
+}
+
+Transform {
+rotation -0.57735 0.57735 0.57735 -2.0944
+translation -1.67932 -0.508 0
+children [
+Inline {
+url "motor_prt.wrl"}
+
+]
+}
+
+]
+}
+
+DEF wheel1 Group {
+children [
+Node_Info {
+node_type "Member"
+node_name "wheel1"
+}
+Member_Info {
+member_name "wheel1"
+member_id 51
+}
+
+Transform {
+rotation -0.57735 -0.57735 -0.57735 -2.0944
+translation 1.95872 -0.508 0
+children [
+Inline {
+url "wheel_prt.wrl"}
+
+]
+}
+
+]
+}
+
+DEF wheel2 Group {
+children [
+Node_Info {
+node_type "Member"
+node_name "wheel2"
+}
+Member_Info {
+member_name "wheel2"
+member_id 54
+}
+
+Transform {
+rotation -0.57735 0.57735 0.57735 -2.0944
+translation -1.95872 -0.508 0
+children [
+Inline {
+url "wheel_prt.wrl"}
+
+]
+}
+
+]
+}
+
+DEF myrio Group {
+children [
+Node_Info {
+node_type "Member"
+node_name "myrio"
+}
+Member_Info {
+member_name "myrio"
+member_id 57
+}
+
+Transform {
+translation 0 1.73482 0
+children [
+Inline {
+url "myrio_prt.wrl"}
+
+]
+}
+
+]
+}
+
+]
+}
+
+]
+}
+
